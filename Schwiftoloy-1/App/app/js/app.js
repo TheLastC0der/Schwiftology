@@ -12,6 +12,6 @@ class HomeController {
       this.message = "Schwiftology"
     }
   }
-}
+
 
  angular.module("MyControllers").controller("homeController", HomeController);
