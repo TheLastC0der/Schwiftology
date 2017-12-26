@@ -1,0 +1,14 @@
+<li>
+  <%= stories.body %> -
+  <small>Submitted <%= time_ago_in_words(story.created_at) %> ago</small>
+
+  <%= form_for [Story, Story.new] do |f| %>
+      <%= f.text_area :body, placeholder: "Name of Story" %><br/>
+      <%= f.submit "Post"  %>
+      <% end %>
+
+  <ul>
+      <%= render partial: 'stories/story', collection: story.stories %>
+  </ul>
+
+</li>
