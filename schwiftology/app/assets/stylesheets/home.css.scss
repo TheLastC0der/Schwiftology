@@ -108,12 +108,6 @@ p {
   padding: 0px 25%;
 }
 
-
-
-
-
-
-
 .scrolled {
   position: fixed;
   left: 0;
@@ -123,10 +117,13 @@ p {
   transition: all 150ms ease-in-out;
 }
 
+
+
 #banner-img {
+  margin-top: 7em;
   padding: 3em;
-    float: left;
-    display: grid;
+  float: left;
+  display: grid;
 }
 
 

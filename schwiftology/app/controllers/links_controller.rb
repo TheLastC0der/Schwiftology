@@ -11,6 +11,7 @@ class LinksController < ApplicationController
   # GET /links/1.json
   def show
     @link = Link.find(params[:id])
+    @comments = Comment.where(link_id: @link).order("created_at DESC")
   end
 
   # GET /links/new
@@ -26,8 +27,8 @@ class LinksController < ApplicationController
   # POST /links.json
   def create
     @link = current_user.links.build(link_params)
-    @link = @commentable.link.new comment_params
-    
+
+
     respond_to do |format|
       if @link.save
         format.html { redirect_to @link, notice: 'Link was successfully created.' }

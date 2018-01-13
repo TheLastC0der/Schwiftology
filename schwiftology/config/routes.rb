@@ -3,8 +3,10 @@ Rails.application.routes.draw do
   get '/links', to: 'links#index'
   get '/new', to: 'links#new'
   get '/about', to: 'pages#about'
-  
-  resources :links
+
+  resources :links do
+    resources :comments
+  end
 
   root to: "pages#home"
 

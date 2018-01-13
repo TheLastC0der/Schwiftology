@@ -1,31 +1,26 @@
-
+<div  class="container link-container">
+  <div class="row">
+    <div class="">
       <p id="notice"><%= notice %></p>
-      <div class="main-container">
-        <div class="row">
-          <div class="col-4 text-center">
-            <p>
-            <strong>Title:</strong>
-            <%= @link.title %>
-            </p>
-          </div>
-        </div>
-          <div class="row">
-            <div class="col-4 text-center">
-              <p>
-                <strong>Url:</strong>
-                <%= @link.url %>
-              </p>
-
-              <%= link_to 'Edit', edit_link_path(@link) %> |
-              <%= link_to 'Back', links_path %>
-
-              <%= f.text_area :body, placeholder: "Add a comment" %><br/>
-              <%= f.submit "Add Comment" %>
-        <% end %>
-
-        <ul>
-          <%= render(partial: 'comments/comment', collection: @story.comments) %>
-        </ul>
-      </div>
+      <p>
+       <strong>Title:</strong>
+       <%= @link.title %>
+      </p>
     </div>
   </div>
+  <div class="row">
+    <div class="">
+       <p>
+        <strong>Url:</strong>
+        <%= @link.url %>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="">
+      <%= render 'comments/comment' %>
+      <%= link_to 'Edit', edit_link_path(@link) %> |
+      <%= link_to 'Back', links_path %>
+    </div>
+  </div>
+</div>

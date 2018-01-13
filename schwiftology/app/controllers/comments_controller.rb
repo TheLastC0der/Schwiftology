@@ -1,29 +1,28 @@
 class CommentsController < ApplicationController
-before_action :find_commentable
+  before_action :find_link
 
-    def new
-      @comment = Comment.new
+
+  def create
+    @comment = @link.comments.create(params[:comment].permit(:content))
+    @comment.user_id = current_user.id
+    @comment.save
+
+    if @comment.save
+      redirect_to link_path(@link)
+    else
+      render 'new'
     end
+  end
 
-    def create
-      @comment = @commentable.comments.new comment_params
+  def destroy
+    
+  end
 
-      if @comment.save
-        redirect_to :back, notice: 'Your comment was successfully posted!'
-      else
-        redirect_to :back, notice: "Your comment wasn't posted!"
-      end
-    end
+  private
 
-    private
 
-    def comment_params
-      params.require(:comment).permit(:body)
-    end
-
-    def find_commentable
-      @commentable = Comment.find_by_id(params[:comment_id]) if params[:comment_id]
-      @commentable = Story.find_by_id(params[:story_id]) if params[:story_id]
-    end
+  def find_link
+    @link = Link.find(params[:link_id])
+  end
 
 end

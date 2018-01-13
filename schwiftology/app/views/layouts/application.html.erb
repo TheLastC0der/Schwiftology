@@ -10,17 +10,11 @@
 
   <body class="background-img">
 
-  <% flash.each do |name, msg| %>
-     <% content_tag(:div, msg, class: "alert alert-#{name}") %>
-     <% end %>
-     <%= render 'shared/navbar' %>
-     <div id="main-container" class="main-container">
-       <div class="text-center">
-         <%= yield %>
-       </div>
-      </div>
-
-
+      <% flash.each do |name, msg| %>
+      <% content_tag(:div, msg, class: "alert alert-#{name}") %>
+      <% end %>
+      <%= render 'shared/navbar' %>
+      <%= yield %>
      <%= render 'shared/footer' %>
 
   </body>
