@@ -1,0 +1,122 @@
+<div class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div id="banner-img" class="banner-content">
+
+                  <%= image_tag("home/123.jpg") %>
+
+                    <ul class="buttons">
+                        <li>
+                            <div class="primary-button">
+                                <a <%= link_to 'Sign up', new_user_registration_path %></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="secondary-button">
+                                <a <%= link_to 'Sign in', new_user_session_path %></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section id="about" class="page-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="service-item first-service">
+                    <div class="icon">
+                        <img src="img/first-service-icon.png" alt="">
+                    </div>
+                    <h4>Topic 1</h4>
+                    <p> Filler</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-item second-service">
+                    <div class="icon">
+                        <img src="img/second-service-icon.png" alt="">
+                    </div>
+                    <h4>Topic 2</h4>
+                    <p>Filler</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-item third-service">
+                    <div class="icon">
+                        <img src="img/third-service-icon.png" alt="">
+                    </div>
+                    <h4>Topic 3</h4>
+                    <p>Filler</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="contact-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h4>Contact Us</h4>
+                    <p>Send us your feedback. :)</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <form id="contact" action="#" method="post">
+                    <div class="row">
+                        <div class="col-md-6">
+                          <fieldset>
+                            <input name="name" type="text" class="form-control" id="name" placeholder="Name..." required="">
+                          </fieldset>
+                        </div>
+                        <div class="col-md-6">
+                          <fieldset>
+                            <input name="email" type="email" class="form-control" id="email" placeholder="Email..." required="">
+                          </fieldset>
+                        </div>
+                         <div class="col-md-6">
+                          <fieldset>
+                            <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject..." required="">
+                          </fieldset>
+                        </div>
+                        <div class="col-md-6">
+                          <fieldset>
+                            <input name="phone" type="phone" class="form-control" id="phone" placeholder="Phone..." required="">
+                          </fieldset>
+                        </div>
+                        <div class="col-md-12">
+                          <fieldset>
+                            <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message..." required=""></textarea>
+                          </fieldset>
+                        </div>
+                        <div class="col-md-12">
+                          <fieldset>
+                            <button type="submit" id="form-submit" class="btn">Send your message</button>
+                          </fieldset>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div id="map">
+<!-- How to change your own map point
+    1. Go to Google Maps
+    2. Click on your location point
+    3. Click "Share" and choose "Embed map" tab
+    4. Copy only URL and paste it within the src="" field below
+-->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d112729.89568016662!2d-82.10863069999998!3d27.999732099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1515796461545" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</section>
