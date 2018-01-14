@@ -1,6 +1,6 @@
-<div  class="container link-container">
+<div id="linkcontainer" class="container" style="margin-top: 5em;">
   <div class="row">
-    <div class="">
+    <div class="col-md-6 text-center">
       <p id="notice"><%= notice %></p>
       <p>
        <strong>Title:</strong>
@@ -9,18 +9,21 @@
     </div>
   </div>
   <div class="row">
-    <div class="">
+    <div class="col-md-6">
+
+
        <p>
         <strong>Url:</strong>
         <%= @link.url %>
       </p>
+
     </div>
   </div>
   <div class="row">
-    <div class="">
+    <div class="col-md-6">
       <%= render 'comments/comment' %>
       <%= link_to 'Edit', edit_link_path(@link) %> |
       <%= link_to 'Back', links_path %>
-    </div>
-  </div>
+</div>
+</div>
 </div>

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   get '/links', to: 'links#index'
   get '/new', to: 'links#new'
-  get '/about', to: 'pages#about'
+
 
   resources :links do
     resources :comments
